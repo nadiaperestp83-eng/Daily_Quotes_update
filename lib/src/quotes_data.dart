@@ -1,9 +1,4 @@
 /// Internal data source for this package's motivational quotes.
-///
-/// This file lives under `src/` and is intentionally **not** part of the
-/// public API. Consumers should not import it directly — use the
-/// top-level [getRandomQuote] function exported from
-/// `package:daily_quotes/daily_quotes.dart` instead.
 library;
 
 /// The full list of motivational quotes bundled with this package.
