@@ -1,82 +1,25 @@
-import 'package:flutter/material.dart';
+/// A simple Dart package that provides motivational quotes and a method
+/// to fetch one at random.
+///
+/// This library is pure Dart (no Flutter dependency), so it works in any
+/// Dart context: Flutter apps, command-line tools, servers, etc.
+library;
+
 import 'dart:math';
 
-void main() => runApp(DailyQuotesApp());
+import 'src/quotes_data.dart';
 
-class DailyQuotesApp extends StatelessWidget {
-  const DailyQuotesApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Daily Quotes',
-      theme: ThemeData(
-        primarySwatch: Colors.teal,
-      ),
-      home: QuoteScreen(),
-    );
-  }
-}
-
-class QuoteScreen extends StatefulWidget {
-  const QuoteScreen({super.key});
-
-  @override
-  _QuoteScreenState createState() => _QuoteScreenState();
-}
-
-class _QuoteScreenState extends State<QuoteScreen> {
-  final List<String> quotes = [
-    "Believe in yourself.",
-    "Stay positive. Work hard. Make it happen.",
-    "Don’t stop until you’re proud.",
-    "Every day is a second chance.",
-    "Push yourself, because no one else is going to do it for you.",
-    "Dream it. Wish it. Do it.",
-    "You are stronger than you think.",
-  ];
-
-  String currentQuote = "";
-
-  @override
-  void initState() {
-    super.initState();
-    _getRandomQuote();
-  }
-
-  void _getRandomQuote() {
-    final random = Random();
-    setState(() {
-      currentQuote = quotes[random.nextInt(quotes.length)];
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Daily Quotes"),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                currentQuote,
-                style: TextStyle(fontSize: 24, fontStyle: FontStyle.italic),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 40),
-              ElevatedButton(
-                onPressed: _getRandomQuote,
-                child: Text("New Quote"),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+/// Returns a random motivational quote from the bundled quote list.
+///
+/// Example:
+/// ```dart
+/// import 'package:daily_quotes/daily_quotes.dart';
+///
+/// void main() {
+///   print(getRandomQuote());
+/// }
+/// ```
+String getRandomQuote() {
+  final random = Random();
+  return kQuotes[random.nextInt(kQuotes.length)];
 }
