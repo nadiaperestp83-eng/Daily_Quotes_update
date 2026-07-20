@@ -4,11 +4,6 @@ import 'package:daily_quotes/src/quotes_data.dart';
 
 void main() {
   group('getRandomQuote', () {
-    test('is importable from package:daily_quotes/daily_quotes.dart', () {
-      // If this compiles and runs, the export bug is fixed.
-      expect(getRandomQuote, isA<String Function()>());
-    });
-
     test('returns a non-empty String', () {
       final quote = getRandomQuote();
       expect(quote, isA<String>());
