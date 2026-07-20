@@ -1,8 +1,8 @@
 name: daily_quotes
 description: "A simple package that provides motivational quotes."
 version: 0.0.2
-homepage: https://github.com/SEU_USUARIO/Daily_Quotes
-repository: https://github.com/SEU_USUARIO/Daily_Quotes
+homepage: https://github.com/nadiaperestp83-eng/Daily_Quotes_update
+repository: https://github.com/nadiaperestp83-eng/Daily_Quotes_update
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
