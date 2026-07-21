@@ -11,10 +11,10 @@ void main() {
   print(getRandomQuote());
 }
 
-👥 Created By
-Group 4
+👥 ReCreated and updated by me
 
-Members: Bilal Shakeel (21K-4874), Muhammad Taha Majeed Khan (21K-3316), Muneeb Azeem (21K-3167), Shayan Anwer (21K-4836)
+
+
 
 
 📚 Topics
